@@ -1,5 +1,5 @@
 
-# 🕰️ **React Clock App** 🕰️
+# 🕰️ **React Clock App**
 
 This is a simple clock application built with **React** to display the current time in a 12-hour format with AM/PM notation. It updates every second to show the current time in real-time!
 
@@ -20,7 +20,7 @@ To get started with this project, clone the repository to your local machine and
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Clock-App.git
+   git clone https://github.com/martinrosik/Clock-App.git
    ```
 2. Navigate to the project folder:
    ```bash
