@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 
+import Button from './Button.jsx'
+
 function Clock() {
 
     const [time, setTime] = useState(new Date())
+    const [timeFormat, setTimeFormat] = useState(false)
 
     const hour = time.getHours();
     const displayHour = hour % 12 || 12; 
@@ -19,10 +22,16 @@ function Clock() {
     }, []);
 
     return (
-        <div className="clock"> 
-            <h1>Current time:</h1>
-            <p>{displayHour}:{minutes}:{seconds} {isAm ? "AM" : "PM"}</p>
-        </div> 
+        <div className="clock-wrapper">
+            <div className="clock"> 
+                <h1>Current time:</h1>
+                <p>{timeFormat ? displayHour : hour}:{minutes}:{seconds} {isAm ? "AM" : "PM"}</p>
+            </div>
+            <Button timeFormat={timeFormat}
+                    setTimeFormat={setTimeFormat}
+
+            /> 
+        </div>    
     )
 }
 
